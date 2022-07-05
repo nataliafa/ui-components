@@ -10,7 +10,7 @@ import {
   UnstyledError,
   Error,
   Checkbox,
-} from "./Checkbox";
+} from "./Checkbox"
 
 export {
   Container,
@@ -24,4 +24,4 @@ export {
   UnstyledError,
   Error,
   Checkbox,
-};
+}

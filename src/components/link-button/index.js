@@ -1,3 +1,3 @@
-import { LinkButton, UnstyledLinkButton } from "./LinkButton";
+import { LinkButton, UnstyledLinkButton } from "./LinkButton"
 
-export { LinkButton, UnstyledLinkButton };
+export { LinkButton, UnstyledLinkButton }

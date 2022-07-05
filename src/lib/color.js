@@ -1,18 +1,18 @@
 // Reference: https://stackoverflow.com/a/41491220
 function colorBasedOnBgColor(bgColor, lightColor, darkColor) {
-  var color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor;
-  var r = parseInt(color.substring(0, 2), 16);
-  var g = parseInt(color.substring(2, 4), 16);
-  var b = parseInt(color.substring(4, 6), 16);
-  var colors = [r / 255, g / 255, b / 255];
+  var color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor
+  var r = parseInt(color.substring(0, 2), 16)
+  var g = parseInt(color.substring(2, 4), 16)
+  var b = parseInt(color.substring(4, 6), 16)
+  var colors = [r / 255, g / 255, b / 255]
   var c = colors.map((e) => {
     if (e <= 0.03928) {
-      return e / 12.92;
+      return e / 12.92
     }
-    return Math.pow((e + 0.055) / 1.055, 2.4);
-  });
-  var l = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
-  return l > 0.179 ? darkColor : lightColor;
+    return Math.pow((e + 0.055) / 1.055, 2.4)
+  })
+  var l = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+  return l > 0.179 ? darkColor : lightColor
 }
 
 // Reference: https://stackoverflow.com/a/1573141
@@ -159,12 +159,12 @@ function colorNameToHex(name) {
     whitesmoke: "#f5f5f5",
     yellow: "#ffff00",
     yellowgreen: "#9acd32",
-  };
+  }
 
   if (typeof colors[name.toLowerCase()] != "undefined")
-    return colors[name.toLowerCase()];
+    return colors[name.toLowerCase()]
 
-  return false;
+  return false
 }
 
 // Reference: https://stackoverflow.com/a/1740716
@@ -186,21 +186,21 @@ function colorRgbToHex(rgb) {
     "d",
     "e",
     "f",
-  ];
+  ]
   const hex = (x) =>
-    isNaN(x) ? "00" : hexDigits[(x - (x % 16)) / 16] + hexDigits[x % 16];
-  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    isNaN(x) ? "00" : hexDigits[(x - (x % 16)) / 16] + hexDigits[x % 16]
+  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3])
 }
 
 function colorToHex(color) {
   if (color.toLowerCase().startsWith("rgb")) {
-    return colorRgbToHex(color);
+    return colorRgbToHex(color)
   } else if (color.startsWith("#")) {
-    return color;
+    return color
   } else {
-    return colorNameToHex(color);
+    return colorNameToHex(color)
   }
 }
 
-export { colorBasedOnBgColor, colorNameToHex, colorRgbToHex, colorToHex };
+export { colorBasedOnBgColor, colorNameToHex, colorRgbToHex, colorToHex }

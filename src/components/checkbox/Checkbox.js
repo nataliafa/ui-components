@@ -1,21 +1,21 @@
-import React, { useMemo } from "react";
-import { ErrorMessage, useField } from "formik";
-import uniqueId from "../../lib/unique-id";
-import styled from "styled-components";
-import * as style from "../../lib/style";
-import check from "./img/check.svg";
+import React, { useMemo } from "react"
+import { ErrorMessage, useField } from "formik"
+import uniqueId from "../../lib/unique-id"
+import styled from "styled-components"
+import * as style from "../../lib/style"
+import check from "./img/check.svg"
 
-export const Container = styled.div``;
+export const Container = styled.div``
 
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-`;
+`
 
 export const UnstyledInput = styled.input`
   margin: 0;
-`;
+`
 
 export const Input = styled.input`
   appearance: none;
@@ -39,31 +39,31 @@ export const Input = styled.input`
     border: 1px solid ${style.blueVariant1};
     box-shadow: 0 0 0 3px ${style.blueVariant2};
   }
-`;
+`
 
-export const UnstyledLabel = styled.label``;
+export const UnstyledLabel = styled.label``
 
 export const Label = styled(UnstyledLabel)`
   margin: 0 0 0 5px;
-`;
+`
 
 export const UnstyledHint = styled.span`
   display: block;
-`;
+`
 
 export const Hint = styled(UnstyledHint)`
   color: #c4cdd5;
   font-size: small;
-`;
+`
 
 export const UnstyledError = styled.span`
   display: block;
-`;
+`
 
 export const Error = styled(UnstyledError)`
   color: hsl(348, 100%, 61%);
   font-size: small;
-`;
+`
 
 export const Checkbox = ({
   name,
@@ -76,12 +76,12 @@ export const Checkbox = ({
   ...props
 }) => {
   if (isFormik && !name) {
-    throw "name is required";
+    throw "name is required"
   }
-  const id = useMemo(() => uniqueId());
-  let meta, field, helpers;
+  const id = useMemo(() => uniqueId())
+  let meta, field, helpers
   try {
-    [field, meta, helpers] = useField(name);
+    ;[field, meta, helpers] = useField(name)
   } catch {}
   return (
     <Container>
@@ -94,7 +94,7 @@ export const Checkbox = ({
           {...props}
           onChange={(e) => {
             if (onChange) {
-              onChange(e.target.checked);
+              onChange(e.target.checked)
             }
           }}
         />
@@ -107,5 +107,5 @@ export const Checkbox = ({
         </Error>
       ) : null}
     </Container>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as style from "../../lib/style";
+import styled from "styled-components"
+import * as style from "../../lib/style"
 
 export const Form = styled.form`
   & > * {
@@ -9,4 +9,4 @@ export const Form = styled.form`
       margin-bottom: 0;
     }
   }
-`;
+`

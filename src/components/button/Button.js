@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { colorBasedOnBgColor, colorToHex } from "../../lib/color";
-import * as style from "../../lib/style";
+import React, { useEffect, useState } from "react"
+import styled from "styled-components"
+import { colorBasedOnBgColor, colorToHex } from "../../lib/color"
+import * as style from "../../lib/style"
 
 const UnstyledElement = styled.button`
   border: 0;
@@ -25,7 +25,7 @@ const UnstyledElement = styled.button`
     opacity: 0.5;
     cursor: default;
   }
-`;
+`
 
 const Element = styled(UnstyledElement)`
   height: 40px;
@@ -36,24 +36,24 @@ const Element = styled(UnstyledElement)`
   &:focus-visible {
     box-shadow: 0 0 0 3px ${style.blueVariant2};
   }
-`;
+`
 
 export function useTextColor(backgroundColor, lightColor, darkColor) {
-  const [textColor, setTextColor] = useState("default");
+  const [textColor, setTextColor] = useState("default")
 
   useEffect(() => {
-    let hexColor;
+    let hexColor
     try {
-      hexColor = colorToHex(backgroundColor);
+      hexColor = colorToHex(backgroundColor)
     } catch {
-      hexColor = null;
+      hexColor = null
     }
     if (hexColor) {
-      setTextColor(colorBasedOnBgColor(hexColor, lightColor, darkColor));
+      setTextColor(colorBasedOnBgColor(hexColor, lightColor, darkColor))
     }
-  }, [backgroundColor]);
+  }, [backgroundColor])
 
-  return textColor;
+  return textColor
 }
 
 export const Button = ({
@@ -67,13 +67,13 @@ export const Button = ({
     backgroundColor,
     lightColor ? lightColor : "white",
     darkColor ? darkColor : style.textColor
-  );
+  )
   return (
     <Element backgroundColor={backgroundColor} color={color} {...props}>
       {text ? text : props.children}
     </Element>
-  );
-};
+  )
+}
 
 export const UnstyledButton = ({
   text,
@@ -86,5 +86,5 @@ export const UnstyledButton = ({
     <UnstyledElement backgroundColor={backgroundColor} {...props}>
       {text ? text : props.children}
     </UnstyledElement>
-  );
-};
+  )
+}

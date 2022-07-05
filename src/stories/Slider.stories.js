@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Slider,
   Container,
@@ -11,21 +11,21 @@ import {
   Text,
   UnstyledControls,
   Arrow,
-} from "../components/slider";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from "../components/slider"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import img1 from "./assets/slider/pexels-andy-vu-3244513.jpg";
-import img2 from "./assets/slider/pexels-eberhard-grossgasteiger-572897.jpg";
-import img3 from "./assets/slider/pexels-matheus-bertelli-1144687.jpg";
-import "./styles/font.css";
+} from "@fortawesome/free-solid-svg-icons"
+import img1 from "./assets/slider/pexels-andy-vu-3244513.jpg"
+import img2 from "./assets/slider/pexels-eberhard-grossgasteiger-572897.jpg"
+import img3 from "./assets/slider/pexels-matheus-bertelli-1144687.jpg"
+import "./styles/font.css"
 
 export default {
   title: "Components/Slider",
   component: Slider,
-};
+}
 
 const slides = [
   {
@@ -46,11 +46,11 @@ const slides = [
     text: "Volutpat consequat mauris nunc congue. Tincidunt augue interdum velit",
     img: img3,
   },
-];
+]
 
 export const Basic = () => (
   <Slider slides={slides} width="700px" height="400px" />
-);
+)
 
 export const BasicPlusUserStyles = () => (
   <Container width="700px" height="400px">
@@ -86,15 +86,15 @@ export const BasicPlusUserStyles = () => (
       )}
     />
   </Container>
-);
-BasicPlusUserStyles.storyName = "Basic + User Styles";
+)
+BasicPlusUserStyles.storyName = "Basic + User Styles"
 
 export const Flexbox = () => (
   <div style={{ display: "flex", width: "100%", height: "400px" }}>
     <Slider slides={slides} style={{ flexGrow: 1 }} />
     <Slider slides={slides} style={{ flexGrow: 1 }} />
   </div>
-);
+)
 
 export const Unstyled = () => (
   <UnstyledContainer width="700px" height="400px">
@@ -134,4 +134,4 @@ export const Unstyled = () => (
       )}
     />
   </UnstyledContainer>
-);
+)

@@ -1,7 +1,7 @@
-import React from "react";
-import { ErrorMessage, Field, useField } from "formik";
-import styled from "styled-components";
-import * as style from "../../lib/style";
+import React from "react"
+import { ErrorMessage, Field, useField } from "formik"
+import styled from "styled-components"
+import * as style from "../../lib/style"
 
 const Label = styled.label`
   display: inline-block;
@@ -12,7 +12,7 @@ const Label = styled.label`
     opacity: 0.5;
   `
       : ""}
-`;
+`
 
 const InputContainer = styled.div`
   position: relative;
@@ -32,7 +32,7 @@ const InputContainer = styled.div`
     }
   `
       : ""}
-`;
+`
 
 const Element = styled.input`
   width: 100%;
@@ -65,7 +65,7 @@ const Element = styled.input`
     padding-left: 50px !important;
   `
       : ""}
-`;
+`
 
 export const Input = ({
   name,
@@ -76,9 +76,9 @@ export const Input = ({
   isFormik,
   ...props
 }) => {
-  let meta, field, helpers;
+  let meta, field, helpers
   try {
-    [field, meta, helpers] = useField(name);
+    ;[field, meta, helpers] = useField(name)
   } catch {}
   return (
     <div>
@@ -113,5 +113,5 @@ export const Input = ({
         </span>
       ) : null}
     </div>
-  );
-};
+  )
+}

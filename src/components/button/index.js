@@ -1,3 +1,3 @@
-import { Button, UnstyledButton, useTextColor } from "./Button";
+import { Button, UnstyledButton, useTextColor } from "./Button"
 
-export { Button, UnstyledButton, useTextColor };
+export { Button, UnstyledButton, useTextColor }

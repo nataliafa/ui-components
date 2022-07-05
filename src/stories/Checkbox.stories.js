@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Container,
   InputContainer,
@@ -11,19 +11,19 @@ import {
   UnstyledError,
   Error,
   Checkbox,
-} from "../components/checkbox";
+} from "../components/checkbox"
 
 export default {
   title: "Components/Checkbox",
   component: Checkbox,
-};
+}
 
 export const Basic = () => (
   <Checkbox
     label="Bluberry Ice Cream 🫐"
     hint="Check this to get Blueberry Ice Cream!"
   />
-);
+)
 
 export const BasicPlusUserStyles = () => (
   <Container>
@@ -37,8 +37,8 @@ export const BasicPlusUserStyles = () => (
       Check this to get Blueberry Ice Cream!
     </Hint>
   </Container>
-);
-BasicPlusUserStyles.storyName = "Basic + User Styles";
+)
+BasicPlusUserStyles.storyName = "Basic + User Styles"
 
 export const BasicPlusError = () => (
   <Container>
@@ -49,8 +49,8 @@ export const BasicPlusError = () => (
     <Hint>Check this to get Blueberry Ice Cream!</Hint>
     <Error>Mayday, we ran out of Blueberries!</Error>
   </Container>
-);
-BasicPlusError.storyName = "Basic + Error";
+)
+BasicPlusError.storyName = "Basic + Error"
 
 export const Unstyled = () => (
   <Container>
@@ -64,7 +64,7 @@ export const Unstyled = () => (
       Check this to get Blueberry Ice Cream!
     </UnstyledHint>
   </Container>
-);
+)
 
 export const UnstyledPlusError = () => (
   <Container>
@@ -81,5 +81,5 @@ export const UnstyledPlusError = () => (
       Mayday, we ran out of Blueberries!
     </UnstyledError>
   </Container>
-);
-UnstyledPlusError.storyName = "Unstyled + Error";
+)
+UnstyledPlusError.storyName = "Unstyled + Error"

@@ -10,7 +10,7 @@ import {
   Text,
   UnstyledControls,
   Arrow,
-} from "./Slider";
+} from "./Slider"
 
 export {
   Slider,
@@ -24,4 +24,4 @@ export {
   Text,
   UnstyledControls,
   Arrow,
-};
+}

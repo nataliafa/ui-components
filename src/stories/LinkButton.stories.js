@@ -1,6 +1,6 @@
-import React from "react";
-import { LinkButton, UnstyledLinkButton } from "../components/link-button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import { LinkButton, UnstyledLinkButton } from "../components/link-button"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faIceCream,
   faLemon,
@@ -9,21 +9,21 @@ import {
   faCandyCane,
   faAppleAlt,
   faCheese,
-} from "@fortawesome/free-solid-svg-icons";
-import "./styles/font.css";
+} from "@fortawesome/free-solid-svg-icons"
+import "./styles/font.css"
 
 export default {
   title: "Components/LinkButton",
   component: LinkButton,
-};
+}
 
-const Template = (args) => <LinkButton {...args} />;
+const Template = (args) => <LinkButton {...args} />
 
-export const Basic = Template.bind({});
+export const Basic = Template.bind({})
 Basic.args = {
   text: "Hello World!",
   backgroundColor: "white",
-};
+}
 
 export const BasicPlusUserStyles = () => (
   <div style={{ display: "flex" }}>
@@ -63,8 +63,8 @@ export const BasicPlusUserStyles = () => (
       style={{ marginLeft: 5 }}
     />
   </div>
-);
-BasicPlusUserStyles.storyName = "Basic + User Styles";
+)
+BasicPlusUserStyles.storyName = "Basic + User Styles"
 
 export const Disabled = () => (
   <div style={{ display: "flex" }}>
@@ -112,7 +112,7 @@ export const Disabled = () => (
       style={{ marginLeft: 5 }}
     />
   </div>
-);
+)
 
 export const Icons = () => (
   <div style={{ display: "flex" }}>
@@ -138,8 +138,8 @@ export const Icons = () => (
       <FontAwesomeIcon icon={faCheese} />
     </LinkButton>
   </div>
-);
+)
 
 export const Unstyled = () => (
   <UnstyledLinkButton>Hello World!</UnstyledLinkButton>
-);
+)
