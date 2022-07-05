@@ -2,6 +2,10 @@
 
 Reusable React Components with CSS-in-JS ⚛️
 
+## Interface
+
+![ui_components](images/ui-components.gif)
+
 ## Getting Started
 
 Install Node.js v16 (Gallium):
