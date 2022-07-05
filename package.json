@@ -2,6 +2,15 @@
   "name": "ui-components",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "npm run storybook",
+    "build": "npm run build-storybook",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 3000 -s public",
+    "build-storybook": "build-storybook"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
@@ -18,14 +27,16 @@
     "styled-components": "5.3.1",
     "uuid": "8.3.2"
   },
-  "scripts": {
-    "start": "npm run storybook",
-    "build": "npm run build-storybook",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "husky install",
-    "storybook": "start-storybook -p 3000 -s public",
-    "build-storybook": "build-storybook"
+  "devDependencies": {
+    "@storybook/addon-actions": "6.3.8",
+    "@storybook/addon-essentials": "6.3.8",
+    "@storybook/addon-links": "6.3.8",
+    "@storybook/node-logger": "6.3.8",
+    "@storybook/preset-create-react-app": "3.2.0",
+    "@storybook/react": "6.3.8",
+    "husky": "7.0.2",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2"
   },
   "eslintConfig": {
     "extends": [
@@ -54,17 +65,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "6.3.8",
-    "@storybook/addon-essentials": "6.3.8",
-    "@storybook/addon-links": "6.3.8",
-    "@storybook/node-logger": "6.3.8",
-    "@storybook/preset-create-react-app": "3.2.0",
-    "@storybook/react": "6.3.8",
-    "husky": "7.0.2",
-    "lint-staged": "11.1.2",
-    "prettier": "2.3.2"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
