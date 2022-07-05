@@ -19,13 +19,13 @@
     "uuid": "8.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run storybook",
+    "build": "npm run build-storybook",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "storybook": "start-storybook -p 3000 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
