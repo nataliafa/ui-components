@@ -4,7 +4,7 @@ Reusable React Components with CSS-in-JS ⚛️
 
 ## Interface
 
-![ui_components](images/ui-components.gif)
+![ui_components](assets/ui-components.gif)
 
 ## Getting Started
 
